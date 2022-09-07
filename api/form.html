@@ -1,0 +1,31 @@
+<html>
+<title>Facebook Group URL</title>
+
+<body>
+    <script>
+        // Show 'please wait'
+        function showMessage() {
+            document.getElementById('waitLabel').style.display = 'block';
+        };
+        // Prevent cyrillic symbols 
+        function checkField(event) {
+            rusSymbols = /[\u0400-\u04FF]/;
+            if (rusSymbols.test(event.key)) {
+                alert('Cyrillic is not allowed. Enter group ID');
+                event.preventDefault();
+            }
+        };
+    </script>
+    <form action='' method='post' enctype='multipart/form-data'>
+        <fieldset style='border: none'>
+            Введите ID группы <br/>
+            <input type='text' id='groupURL' name='groupURL' onkeypress='checkField(event)' style='width: 200px; margin: 5px;' />
+            <br />
+            <input type='submit' value='Send' style=' margin: 5px;' onclick='showMessage()' />
+            <p>Lookup Facebook Group ID - <a href='https://lookup-id.com' target='_blank'>https://lookup-id.com</a></p>
+            <p id='waitLabel' style='display: none; margin: 5px;'>Please wait...</p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

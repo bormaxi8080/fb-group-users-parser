@@ -1,0 +1,12 @@
+{
+    "name": "fbapi_app",
+    "description": "",
+    "version": "1.0.0",
+    "author": "",
+	"email": "",
+    "dependencies": {
+        "fb": "latest",
+		"formidable": "latest",
+		"config-yml": "latest"
+    }
+}
